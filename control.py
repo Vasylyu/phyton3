@@ -70,13 +70,3 @@ def delete_note(file_name):
         print("Заметка успешна удалена")
 
 
-def sorted_date(file_name):
-    date = datetime.now()
-    str_date = date.strftime("%c")
-    sorted_dates = sorted(str_date)
-    with open(file_name, 'r') as file:
-        lst = file.readlines()
-    for item in lst:
-        if (date > 0):
-            item +1
-        print(item)
