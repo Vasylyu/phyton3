@@ -19,8 +19,6 @@ def main():
         elif input_number == '5':
             control.find_note(file_name)
         elif input_number == '6':
-            control.sorted_date(file_name)
-        elif input_number == '7':
             print("good bay")
             break
         print("Записная книжка завершила работу")
