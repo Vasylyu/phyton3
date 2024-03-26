@@ -77,4 +77,6 @@ def sorted_date(file_name):
     with open(file_name, 'r') as file:
         lst = file.readlines()
     for item in lst:
-        print(item, sorted_dates)
+        if (date > 0):
+            item +1
+        print(item)
