@@ -1,15 +1,17 @@
 from flask import Flask, request
 from flask_wtf import FlaskForm
 from wtforms import StringField, IntegerField
+from wtforms.validators import InputRequired, Email, NumberRange
 
 app = Flask(__name__)
 
 
 class RegisrationForm(FlaskForm):
-    email = StringField()
-    phone = IntegerField()
-    name = StringField()
-    index = IntegerField()
+    email = StringField(validators=[InputRequired(), Email()])
+    phone = IntegerField(validators=[InputRequired(), NumberRange(min=10000000000, max=99999999999)])
+    name = StringField(validators=[InputRequired()])
+    address = StringField(validators=[InputRequired()])
+    index = IntegerField(validators=[InputRequired()])
     comment = StringField()
 
 
