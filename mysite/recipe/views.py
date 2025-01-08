@@ -21,7 +21,7 @@ def recipe_index(request: HttpRequest):
 
 def groups_list(request: HttpRequest):
     contex = {
-        "groups": Group.objects.all(),
+        "groups": Group.objects.prefetch_related('permissions').all(),
 
     }
-    return render(request, 'recipe/groups-list', context=contex)
+    return render(request, 'recipe/groups-list.html', context=contex)
