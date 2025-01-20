@@ -5,10 +5,10 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Groups:</h1>
+    <h1>Groups hyups:</h1>
     <div>
     {% if not groups %}
-    <h3>No groups yet</h3>
+        <h3>No groups yet</h3>
     {% else %}
     <ul>
 
@@ -22,8 +22,8 @@
                     (<code>{{ permission.codename }}</code>)
                 </li>
                 {% endfor %}
-            </ul>
 
+            </ul>
         </li>
         {% endfor %}
 
