@@ -1,18 +1,17 @@
 {% extends 'recipe/base-html.html' %}
 
 {% block title %}
-    Group List
+    Groups List
 {% endblock %}
 
 {% block body %}
-    <h1>Groups hyups:</h1>
+    <h1>Groups:</h1>
     <div>
     {% if not groups %}
         <h3>No groups yet</h3>
     {% else %}
     <ul>
-
-        {% for group in group %}
+        {% for group in groups %}
         <li>
             <div>{{ group.name }}</div>
             <ul>
@@ -22,12 +21,12 @@
                     (<code>{{ permission.codename }}</code>)
                 </li>
                 {% endfor %}
-
             </ul>
         </li>
         {% endfor %}
-
     </ul>
     {% endif %}
 </div>
 {% endblock %}
+
+

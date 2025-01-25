@@ -1,8 +1,8 @@
-
 from timeit import default_timer
 from django.contrib.auth.models import Group
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
+from .models import Product
 
 
 def recipe_index(request: HttpRequest):
@@ -25,3 +25,8 @@ def groups_list(request: HttpRequest):
 
     }
     return render(request, 'recipe/groups-list.html', context=contex)
+
+
+def products_list(request: HttpRequest):
+    context = {"products": Product.objects.all(),}
+    return render(request, 'recipe/products-list.html', context=context)
