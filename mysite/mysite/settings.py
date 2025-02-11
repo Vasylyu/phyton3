@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'recipe.apps.RecipeConfig',
+    'requestdataapp.apps.RequestdataappConfig',
 ]
 
 MIDDLEWARE = [
